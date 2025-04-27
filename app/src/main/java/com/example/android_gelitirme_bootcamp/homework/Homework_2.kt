@@ -23,6 +23,12 @@ fun main() {
     val faktoriyel = faktoriyelHesapla(sayi)
     println("$sayi sayısının faktöriyeli = $faktoriyel")
 
+    //4-Kelime içinde kaç tane 'e' harfi olduğunu bulan metod
+
+    val kelime = "Muvaffakiyetsizleştiricileştiriveremeyebileceklerimizdenmişsinizcesine"
+    val eSayisi = eSayisiBulma(kelime)
+    println("$kelime kelimesinde $eSayisi tane 'e' harfi vardır." )
+
 }
 
 fun donusum(derece: Double) : Double{
@@ -35,6 +41,15 @@ fun faktoriyelHesapla(sayi: Int): Int {
         sonuc2 *= i
     }
     return sonuc2
+}
+
+fun eSayisiBulma(kelime: String): Int{
+    var sayac = 0
+    for (harf in kelime){
+        if (harf == 'E' || harf == 'e')
+            sayac ++
+    }
+    return sayac
 }
 
 
